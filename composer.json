@@ -1,0 +1,59 @@
+{
+    "name": "pasinter/test",
+    "license": "proprietary",
+    "type": "project",
+    "description": "Test",
+    "autoload": {
+        "psr-0": { "": "src/" },
+        "classmap": [
+
+        ]
+    },
+    "autoload-dev": {
+        "files": [
+
+        ]
+    },
+    "require": {
+        "pasinter/package-migrations-composer-plugin": "dev-master",
+        "pasinter/test-bundle": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.2",
+        "sensio/generator-bundle": "^3.0",
+        "sensiolabs/behat-page-object-extension": "^2.0",
+        "symfony/phpunit-bridge": "~3.3.5",
+        "willdurand/faker-bundle": "^1.3"
+    },
+    "repositories": [
+        {"type": "vcs", "url": "git@github.com:pasinter/package-migrations-composer-plugin.git"},
+        {"type": "vcs", "url": "https://github.com/pasinter/MigrationTestBundle.git"}
+    ],
+    "scripts": {
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ]
+
+    },
+    "config": {
+        "bin-dir": "bin",
+        "sort-packages": true
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": null
+    }
+}
