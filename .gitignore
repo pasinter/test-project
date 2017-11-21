@@ -1,0 +1,3 @@
+/bin/
+/vendor/
+/app/DoctrineMigrations/*.package.php
